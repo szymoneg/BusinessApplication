@@ -12,7 +12,7 @@ class ApiService {
     private var dataTask: URLSessionDataTask?
         
         func getPopularMoviesData(completion: @escaping (Result<CurrencyData, Error>) -> Void){
-            let moviesURL = "https://api.exchangeratesapi.io/latest?base=USD"
+            let moviesURL = "https://api.exchangeratesapi.io/latest?base=USD?access_key=a0915eb86a90b91d32e153e5b07c9c0c"
             
             guard let url = URL(string: moviesURL) else {
                 return
