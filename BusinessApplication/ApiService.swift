@@ -11,16 +11,16 @@ import Foundation
 class ApiService {
     private var dataTask: URLSessionDataTask?
         
-        func getPopularMoviesData(completion: @escaping (Result<CurrencyData, Error>) -> Void){
-            let moviesURL = "http://api.exchangeratesapi.io/v1/latest?access_key=c10e8b32c392b724355ae693c6d02f1c"
+    func fetchExchangeData(completion: @escaping (RatesDetailModel) -> ()){
+            let moviesURL = "https://api.ratesexchange.eu/client/latestdetails?apiKey=cbbec2bf-ab4c-4754-9843-c317a4e11d11"
             
             guard let url = URL(string: moviesURL) else {
                 return
             }
             
-            dataTask = URLSession.shared.dataTask(with: url){ (data, response, error) in
-                if let error = error{
-                    completion(.failure(error))
+            URLSession.shared.dataTask(with: url){ (data, response, error) in
+                if error != nil{
+                    //.completion(.failure(error))
                     print("Datatask error")
                     return
                 }
@@ -38,17 +38,15 @@ class ApiService {
                 }
                 
                 do{
-                    let decoder = JSONDecoder()
-                    let jsonData = try decoder.decode(CurrencyData.self, from: data)
+                    let responseModel = try JSONDecoder().decode(RatesDetailModel.self, from: data)
                     
                     DispatchQueue.main.async {
-                        completion(.success(jsonData))
+                        completion(responseModel)
                     }
                     
-                }catch let error{
-                    completion(.failure(error))
+                }catch let jsonErorr{
+                    print(jsonErorr)
                 }
-            }
-            dataTask?.resume()
+            }.resume()
         }
 }
