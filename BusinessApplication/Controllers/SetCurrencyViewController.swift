@@ -13,7 +13,7 @@ class SetCurrencyViewController: UIViewController {
     @IBOutlet weak var currencyValue: UILabel!
     
     private let selectedCurrencyVariable = Variable("EUR")
-    var selectedCharacter:Observable<String>{
+    var selectedCurrency:Observable<String>{
         return selectedCurrencyVariable.asObservable()
     }
     

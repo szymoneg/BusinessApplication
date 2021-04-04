@@ -73,20 +73,52 @@
 		2AB4F3DA2609527D00B9E343 /* BusinessApplication */ = {
 			isa = PBXGroup;
 			children = (
-				2AB4F3F42609558B00B9E343 /* RatesDetailModel.swift */,
+				2AD7A615261A8536003CC160 /* Web */,
+				2AD7A614261A852E003CC160 /* View */,
+				2AD7A613261A8525003CC160 /* Model */,
+				2AD7A612261A8519003CC160 /* Controllers */,
 				2AB4F3DB2609527D00B9E343 /* AppDelegate.swift */,
 				2AB4F3DD2609527D00B9E343 /* SceneDelegate.swift */,
-				2AB4F3E12609527D00B9E343 /* Main.storyboard */,
-				2AB4F3F12609546300B9E343 /* CurrencyTableViewController.swift */,
 				2AB4F3E42609528100B9E343 /* Assets.xcassets */,
 				2AB4F3E62609528100B9E343 /* LaunchScreen.storyboard */,
 				2AB4F3E92609528100B9E343 /* Info.plist */,
-				2AB4F4522612512C00B9E343 /* ApiService.swift */,
+			);
+			path = BusinessApplication;
+			sourceTree = "<group>";
+		};
+		2AD7A612261A8519003CC160 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				2AD617D92617ABA50071D5C3 /* DetailsViewController.swift */,
 				2AD617E12618F88A0071D5C3 /* MenuViewController.swift */,
 				2AD618192619FD5B0071D5C3 /* SetCurrencyViewController.swift */,
+				2AB4F3F12609546300B9E343 /* CurrencyTableViewController.swift */,
 			);
-			path = BusinessApplication;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2AD7A613261A8525003CC160 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2AB4F3F42609558B00B9E343 /* RatesDetailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2AD7A614261A852E003CC160 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2AB4F3E12609527D00B9E343 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2AD7A615261A8536003CC160 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				2AB4F4522612512C00B9E343 /* ApiService.swift */,
+			);
+			path = Web;
 			sourceTree = "<group>";
 		};
 		905880A4C8CA8CCB545C6E4A /* Frameworks */ = {

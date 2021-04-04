@@ -8,10 +8,17 @@
 import UIKit
 import RxSwift
 
+class CurrencyTableViewCell: UITableViewCell {
+    @IBOutlet weak var currencySymbol: UILabel!
+    @IBOutlet weak var valueCurrency: UILabel!
+    @IBOutlet weak var flagIcon: UIImageView!
+}
+
 
 class CurrencyTableViewController: UITableViewController {
     
-    @IBOutlet weak var textFiield: UILabel!
+    
+    @IBOutlet weak var nameCurrency: UILabel!
     
     
     let disposeBag = DisposeBag()
@@ -28,15 +35,22 @@ class CurrencyTableViewController: UITableViewController {
         }
     }
     
-    func setupRefreshControl() {
-         if #available(iOS 10.0, *) {
-             tableView.refreshControl = refreshCtrl
-         } else {
-             tableView.addSubview(refreshCtrl)
-         }
-         refreshCtrl.addTarget(self, action: #selector(getData), for: .valueChanged)
-     }
-
+//    func setupRefreshControl() {
+//         if #available(iOS 10.0, *) {
+//             tableView.refreshControl = refreshCtrl
+//         } else {
+//             tableView.addSubview(refreshCtrl)
+//         }
+//         refreshCtrl.addTarget(self, action: #selector(getData), for: .valueChanged)
+//     }
+    
+    
+    @IBAction func refreshTable(_ sender: UIRefreshControl) {
+        getData()
+        sender.endRefreshing()
+        tableView.reloadData()
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -47,12 +61,14 @@ class CurrencyTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CurrencyCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CurrencyCell", for: indexPath) as! CurrencyTableViewCell
         
         guard let data = allRates?.rates else { return cell }
         let rateData = data[indexPath.row]
         
-        cell.textLabel?.text = "\(rateData.symbol): \(String(rateData.value))"
+        //cell.textLabel?.text = "\(rateData.symbol): \(String(rateData.value))"
+        cell.currencySymbol.text = rateData.symbol
+        cell.valueCurrency.text = String(rateData.value)
         
         return cell
     }
@@ -66,9 +82,10 @@ class CurrencyTableViewController: UITableViewController {
         
         detailVC.valueCurrency = rateData.symbol
         
-        detailVC.selectedCharacter
+        detailVC.selectedCurrency
             .subscribe(onNext: { [weak self] character in
                 self?.url = character
+                self?.getData()
             }).disposed(by: disposeBag)
        
         navigationController?.pushViewController(detailVC, animated: true)
@@ -79,7 +96,6 @@ class CurrencyTableViewController: UITableViewController {
         super.viewDidLoad()
         title = "Currency Table"
         
-        setupRefreshControl()
         getData()
     }
 }
