@@ -6,20 +6,23 @@
 //
 
 import UIKit
+import RxSwift
 
 
 class CurrencyTableViewController: UITableViewController {
     
     @IBOutlet weak var textFiield: UILabel!
     
-    var index = 0
     
+    let disposeBag = DisposeBag()
     let fetchData = ApiService()
     var allRates: RatesDetailModel?
+    var url: String = "EUR"
     private let refreshCtrl = UIRefreshControl()
     
     @objc func getData(){
-        fetchData.fetchExchangeData{(result) in
+        print(url)
+        fetchData.fetchExchangeData(baseUrl: url){(result) in
             self.allRates = result
             self.tableView.reloadData()
         }
@@ -57,10 +60,19 @@ class CurrencyTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let data = allRates?.rates else { return }
         let rateData = data[indexPath.row]
+
         
-        let vc = storyboard?.instantiateViewController(identifier: "setCurrencyViewController") as? SetCurrencyViewController
-        vc?.value = String(rateData.value)
-        self.navigationController?.pushViewController(vc!, animated: true)
+        let detailVC = storyboard?.instantiateViewController(withIdentifier: "setCurrencyViewController") as! SetCurrencyViewController
+        
+        detailVC.valueCurrency = rateData.symbol
+        
+        detailVC.selectedCharacter
+            .subscribe(onNext: { [weak self] character in
+                self?.url = character
+            }).disposed(by: disposeBag)
+       
+        navigationController?.pushViewController(detailVC, animated: true)
+        
     }
     
     override func viewDidLoad() {
