@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,9 +16,13 @@
 		2AB4F3F52609558B00B9E343 /* RatesDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB4F3F42609558B00B9E343 /* RatesDetailModel.swift */; };
 		2AB4F4532612512C00B9E343 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB4F4522612512C00B9E343 /* ApiService.swift */; };
 		2AD617DA2617ABA50071D5C3 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD617D92617ABA50071D5C3 /* DetailsViewController.swift */; };
+		2AD617E22618F88A0071D5C3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD617E12618F88A0071D5C3 /* MenuViewController.swift */; };
+		2AD6181A2619FD5B0071D5C3 /* SetCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD618192619FD5B0071D5C3 /* SetCurrencyViewController.swift */; };
+		C8619D252A92F7054E645DC9 /* Pods_BusinessApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC5322480942CF134441F37 /* Pods_BusinessApplication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FC5322480942CF134441F37 /* Pods_BusinessApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusinessApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB4F3D82609527D00B9E343 /* BusinessApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusinessApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB4F3DB2609527D00B9E343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AB4F3DD2609527D00B9E343 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +34,10 @@
 		2AB4F3F42609558B00B9E343 /* RatesDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesDetailModel.swift; sourceTree = "<group>"; };
 		2AB4F4522612512C00B9E343 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		2AD617D92617ABA50071D5C3 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		2AD617E12618F88A0071D5C3 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		2AD618192619FD5B0071D5C3 /* SetCurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCurrencyViewController.swift; sourceTree = "<group>"; };
+		9C98742802322373BE76D791 /* Pods-BusinessApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusinessApplication.debug.xcconfig"; path = "Target Support Files/Pods-BusinessApplication/Pods-BusinessApplication.debug.xcconfig"; sourceTree = "<group>"; };
+		C06D05B89B557C833B2D387C /* Pods-BusinessApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusinessApplication.release.xcconfig"; path = "Target Support Files/Pods-BusinessApplication/Pods-BusinessApplication.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8619D252A92F7054E645DC9 /* Pods_BusinessApplication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +57,8 @@
 			children = (
 				2AB4F3DA2609527D00B9E343 /* BusinessApplication */,
 				2AB4F3D92609527D00B9E343 /* Products */,
+				9658AD9E340BC16801EF3E95 /* Pods */,
+				905880A4C8CA8CCB545C6E4A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,8 +83,27 @@
 				2AB4F3E92609528100B9E343 /* Info.plist */,
 				2AB4F4522612512C00B9E343 /* ApiService.swift */,
 				2AD617D92617ABA50071D5C3 /* DetailsViewController.swift */,
+				2AD617E12618F88A0071D5C3 /* MenuViewController.swift */,
+				2AD618192619FD5B0071D5C3 /* SetCurrencyViewController.swift */,
 			);
 			path = BusinessApplication;
+			sourceTree = "<group>";
+		};
+		905880A4C8CA8CCB545C6E4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FC5322480942CF134441F37 /* Pods_BusinessApplication.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9658AD9E340BC16801EF3E95 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C98742802322373BE76D791 /* Pods-BusinessApplication.debug.xcconfig */,
+				C06D05B89B557C833B2D387C /* Pods-BusinessApplication.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AB4F3EC2609528100B9E343 /* Build configuration list for PBXNativeTarget "BusinessApplication" */;
 			buildPhases = (
+				9D5F5BEADBEFD3208DA44939 /* [CP] Check Pods Manifest.lock */,
 				2AB4F3D42609527D00B9E343 /* Sources */,
 				2AB4F3D52609527D00B9E343 /* Frameworks */,
 				2AB4F3D62609527D00B9E343 /* Resources */,
+				2DD44319C633BBF2817F58F7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,14 +173,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2DD44319C633BBF2817F58F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BusinessApplication/Pods-BusinessApplication-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BusinessApplication/Pods-BusinessApplication-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BusinessApplication/Pods-BusinessApplication-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D5F5BEADBEFD3208DA44939 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BusinessApplication-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2AB4F3D42609527D00B9E343 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AD6181A2619FD5B0071D5C3 /* SetCurrencyViewController.swift in Sources */,
 				2AB4F3F22609546300B9E343 /* CurrencyTableViewController.swift in Sources */,
 				2AB4F4532612512C00B9E343 /* ApiService.swift in Sources */,
 				2AB4F3DC2609527D00B9E343 /* AppDelegate.swift in Sources */,
+				2AD617E22618F88A0071D5C3 /* MenuViewController.swift in Sources */,
 				2AB4F3F52609558B00B9E343 /* RatesDetailModel.swift in Sources */,
 				2AB4F3DE2609527D00B9E343 /* SceneDelegate.swift in Sources */,
 				2AD617DA2617ABA50071D5C3 /* DetailsViewController.swift in Sources */,
@@ -295,6 +371,7 @@
 		};
 		2AB4F3ED2609528100B9E343 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C98742802322373BE76D791 /* Pods-BusinessApplication.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -313,6 +390,7 @@
 		};
 		2AB4F3EE2609528100B9E343 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C06D05B89B557C833B2D387C /* Pods-BusinessApplication.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

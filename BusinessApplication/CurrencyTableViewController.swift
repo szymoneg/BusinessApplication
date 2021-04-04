@@ -12,9 +12,10 @@ class CurrencyTableViewController: UITableViewController {
     
     @IBOutlet weak var textFiield: UILabel!
     
+    var index = 0
     
     let fetchData = ApiService()
-    private var allRates: RatesDetailModel?
+    var allRates: RatesDetailModel?
     private let refreshCtrl = UIRefreshControl()
     
     @objc func getData(){
@@ -51,6 +52,15 @@ class CurrencyTableViewController: UITableViewController {
         cell.textLabel?.text = "\(rateData.symbol): \(String(rateData.value))"
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let data = allRates?.rates else { return }
+        let rateData = data[indexPath.row]
+        
+        let vc = storyboard?.instantiateViewController(identifier: "setCurrencyViewController") as? SetCurrencyViewController
+        vc?.value = String(rateData.value)
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     override func viewDidLoad() {

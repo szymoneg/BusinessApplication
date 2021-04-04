@@ -12,7 +12,7 @@ class ApiService {
     private var dataTask: URLSessionDataTask?
         
     func fetchExchangeData(completion: @escaping (RatesDetailModel) -> ()){
-            let moviesURL = "https://api.ratesexchange.eu/client/latestdetails?apiKey=cbbec2bf-ab4c-4754-9843-c317a4e11d11"
+            let moviesURL = "https://api.ratesexchange.eu/client/latestdetails?apiKey=cbbec2bf-ab4c-4754-9843-c317a4e11d11&base_currency=PLN"
             
             guard let url = URL(string: moviesURL) else {
                 return
