@@ -81,6 +81,9 @@ class CurrencyTableViewController: UITableViewController {
         let detailVC = storyboard?.instantiateViewController(withIdentifier: "setCurrencyViewController") as! SetCurrencyViewController
         
         detailVC.valueCurrency = rateData.symbol
+        detailVC.realValue = String(rateData.value)
+        detailVC.descritionValue = rateData.currency
+        
         
         detailVC.selectedCurrency
             .subscribe(onNext: { [weak self] character in

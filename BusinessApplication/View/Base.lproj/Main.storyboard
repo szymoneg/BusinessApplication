@@ -118,13 +118,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z96-S9-gmM">
-                                <rect key="frame" x="79" y="342.5" width="246" height="38.5"/>
+                                <rect key="frame" x="84" y="274" width="246" height="38.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="246" id="G48-19-gvl"/>
+                                    <constraint firstAttribute="height" constant="38.5" id="Vmc-4d-yeH"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fL2-XI-LGI">
-                                <rect key="frame" x="20" y="480" width="374" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="se1-66-vzk">
+                                <rect key="frame" x="84" y="343" width="246" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="0l9-yK-AI8"/>
+                                    <constraint firstAttribute="width" constant="246" id="8Sm-2a-l2g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuT-NO-oze">
+                                <rect key="frame" x="84" y="389" width="246" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OJE-La-njY"/>
+                                    <constraint firstAttribute="width" constant="246" id="sy6-nO-h7B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fL2-XI-LGI">
+                                <rect key="frame" x="20" y="529" width="374" height="30"/>
                                 <state key="normal" title="Set Currency"/>
                                 <connections>
                                     <action selector="setCurrencyValue:" destination="Cww-bo-OXT" eventType="touchUpInside" id="xDA-qG-o2T"/>
@@ -135,17 +159,26 @@
                         <viewLayoutGuide key="safeArea" id="wVB-Px-DcJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="z96-S9-gmM" firstAttribute="top" secondItem="wVB-Px-DcJ" secondAttribute="top" constant="254.5" id="178-MI-aMz"/>
-                            <constraint firstItem="wVB-Px-DcJ" firstAttribute="bottom" secondItem="fL2-XI-LGI" secondAttribute="bottom" constant="352" id="IKp-io-5ZJ"/>
-                            <constraint firstItem="z96-S9-gmM" firstAttribute="leading" secondItem="wVB-Px-DcJ" secondAttribute="leading" constant="79" id="LMf-zj-7rv"/>
+                            <constraint firstItem="wVB-Px-DcJ" firstAttribute="trailing" secondItem="JuT-NO-oze" secondAttribute="trailing" constant="84" id="1p6-fW-cHa"/>
+                            <constraint firstItem="se1-66-vzk" firstAttribute="leading" secondItem="wVB-Px-DcJ" secondAttribute="leading" constant="84" id="3eR-s5-7PS"/>
+                            <constraint firstItem="JuT-NO-oze" firstAttribute="leading" secondItem="wVB-Px-DcJ" secondAttribute="leading" constant="84" id="Do5-Sz-q8r"/>
+                            <constraint firstItem="wVB-Px-DcJ" firstAttribute="trailing" secondItem="se1-66-vzk" secondAttribute="trailing" constant="84" id="EHw-x3-es1"/>
+                            <constraint firstItem="wVB-Px-DcJ" firstAttribute="bottom" secondItem="fL2-XI-LGI" secondAttribute="bottom" constant="310" id="IKp-io-5ZJ"/>
+                            <constraint firstItem="z96-S9-gmM" firstAttribute="top" secondItem="wVB-Px-DcJ" secondAttribute="top" constant="186" id="PFz-Qg-PP0"/>
                             <constraint firstItem="fL2-XI-LGI" firstAttribute="leading" secondItem="wVB-Px-DcJ" secondAttribute="leading" constant="20" id="Pjz-KS-zYy"/>
+                            <constraint firstItem="wVB-Px-DcJ" firstAttribute="trailing" secondItem="z96-S9-gmM" secondAttribute="trailing" constant="84" id="XaI-DI-9SF"/>
                             <constraint firstItem="wVB-Px-DcJ" firstAttribute="trailing" secondItem="fL2-XI-LGI" secondAttribute="trailing" constant="20" id="d2g-gE-ulf"/>
-                            <constraint firstItem="wVB-Px-DcJ" firstAttribute="trailing" secondItem="z96-S9-gmM" secondAttribute="trailing" constant="89" id="y54-pd-YZV"/>
+                            <constraint firstItem="se1-66-vzk" firstAttribute="top" secondItem="z96-S9-gmM" secondAttribute="bottom" constant="30.5" id="nuB-Tg-A7c"/>
+                            <constraint firstItem="z96-S9-gmM" firstAttribute="leading" secondItem="wVB-Px-DcJ" secondAttribute="leading" constant="84" id="wBM-YB-SHV"/>
+                            <constraint firstItem="JuT-NO-oze" firstAttribute="top" secondItem="se1-66-vzk" secondAttribute="bottom" constant="14" id="xEs-Ny-5il"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="429-WG-9sl"/>
                     <connections>
                         <outlet property="currencyValue" destination="z96-S9-gmM" id="6lq-n5-hKV"/>
+                        <outlet property="descriptionLabel" destination="JuT-NO-oze" id="LqV-MY-Xds"/>
+                        <outlet property="setButton" destination="fL2-XI-LGI" id="cQZ-qP-sVc"/>
+                        <outlet property="symbolLabel" destination="se1-66-vzk" id="cXT-IA-Mcm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbC-dt-DDt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
