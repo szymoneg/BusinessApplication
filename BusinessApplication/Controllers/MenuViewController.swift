@@ -9,9 +9,15 @@ import UIKit
 
 class MenuViewController: UIViewController {
 
+    @IBOutlet weak var goToExchangeButton: UIButton!
+    @IBOutlet weak var goToCurrencyListButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        goToExchangeButton.layer.cornerRadius = 15.0
+        goToCurrencyListButton.layer.cornerRadius = 15.0
         // Do any additional setup after loading the view.
     }
     

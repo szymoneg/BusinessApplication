@@ -69,6 +69,7 @@ class CurrencyTableViewController: UITableViewController {
         //cell.textLabel?.text = "\(rateData.symbol): \(String(rateData.value))"
         cell.currencySymbol.text = rateData.symbol
         cell.valueCurrency.text = String(rateData.value)
+        cell.flagIcon.image = UIImage(named: rateData.symbol.lowercased())
         
         return cell
     }
