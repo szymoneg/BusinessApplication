@@ -16,8 +16,7 @@ class CurrencyTableViewCell: UITableViewCell {
 
 
 class CurrencyTableViewController: UITableViewController {
-    
-    
+     
     @IBOutlet weak var nameCurrency: UILabel!
     
     
