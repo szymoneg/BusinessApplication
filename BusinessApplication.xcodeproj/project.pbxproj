@@ -19,7 +19,6 @@
 		2AD617E22618F88A0071D5C3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD617E12618F88A0071D5C3 /* MenuViewController.swift */; };
 		2AD6181A2619FD5B0071D5C3 /* SetCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD618192619FD5B0071D5C3 /* SetCurrencyViewController.swift */; };
 		2AD7A6182621AADC003CC160 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD7A6172621AADC003CC160 /* Settings.swift */; };
-		2AD7A65826407E5B003CC160 /* review.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AD7A65726407E5A003CC160 /* review.gif */; };
 		C8619D252A92F7054E645DC9 /* Pods_BusinessApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC5322480942CF134441F37 /* Pods_BusinessApplication.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +38,6 @@
 		2AD617E12618F88A0071D5C3 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2AD618192619FD5B0071D5C3 /* SetCurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCurrencyViewController.swift; sourceTree = "<group>"; };
 		2AD7A6172621AADC003CC160 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		2AD7A65726407E5A003CC160 /* review.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = review.gif; path = ../../../../Downloads/review.gif; sourceTree = "<group>"; };
 		9C98742802322373BE76D791 /* Pods-BusinessApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusinessApplication.debug.xcconfig"; path = "Target Support Files/Pods-BusinessApplication/Pods-BusinessApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		C06D05B89B557C833B2D387C /* Pods-BusinessApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusinessApplication.release.xcconfig"; path = "Target Support Files/Pods-BusinessApplication/Pods-BusinessApplication.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,7 +57,6 @@
 		2AB4F3CF2609527D00B9E343 = {
 			isa = PBXGroup;
 			children = (
-				2AD7A65626407C6A003CC160 /* Doc */,
 				2AD7A6172621AADC003CC160 /* Settings.swift */,
 				2AB4F3DA2609527D00B9E343 /* BusinessApplication */,
 				2AB4F3D92609527D00B9E343 /* Products */,
@@ -125,14 +122,6 @@
 				2AB4F4522612512C00B9E343 /* ApiService.swift */,
 			);
 			path = Web;
-			sourceTree = "<group>";
-		};
-		2AD7A65626407C6A003CC160 /* Doc */ = {
-			isa = PBXGroup;
-			children = (
-				2AD7A65726407E5A003CC160 /* review.gif */,
-			);
-			path = Doc;
 			sourceTree = "<group>";
 		};
 		905880A4C8CA8CCB545C6E4A /* Frameworks */ = {
@@ -213,7 +202,6 @@
 			files = (
 				2AB4F3E82609528100B9E343 /* LaunchScreen.storyboard in Resources */,
 				2AB4F3E52609528100B9E343 /* Assets.xcassets in Resources */,
-				2AD7A65826407E5B003CC160 /* review.gif in Resources */,
 				2AB4F3E32609527D00B9E343 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
