@@ -10,11 +10,18 @@ import UIKit
 class DetailsViewController: UIViewController {
 
     @IBOutlet weak var valueFromLabel: UILabel!
+    @IBOutlet weak var valueToLabel: UILabel!
     @IBOutlet weak var valueFromPicker: UIPickerView!
+    @IBOutlet weak var inputFrom: UITextField!
+    @IBOutlet weak var inputTo: UITextField!
+    
     
     let values = ["EUR","USD","PLN"]
     var selected1 = "EUR"
     var selected2 = "USD"
+    
+    var valueFrom = "0"
+    var valueTo = "0"
     let apiConn = ApiService()
     
     override func viewDidLoad() {
@@ -25,13 +32,13 @@ class DetailsViewController: UIViewController {
     }
 
     @IBAction func sendNudes(_ sender: UIButton) {
-        print("\(selected1)" + "\(selected2)")
         getData()
+        valueFrom = inputFrom.text ?? "0"
     }
     
     @objc func getData(){
-        apiConn.exchangeValue(baseUrl: "URL"){ (result) in
-            print(result.rates)
+        apiConn.exchangeValue(symbolFrom: selected1, symbolTo: selected2, value: String(valueFrom)){ (result) in
+            self.inputTo.text = String(result.rates[0].value)
         }
     }
     

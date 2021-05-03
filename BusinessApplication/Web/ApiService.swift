@@ -50,8 +50,8 @@ class ApiService {
             }.resume()
         }
     
-    func exchangeValue(baseUrl: String, completion: @escaping (RatesDetailModel) -> ()){
-        let exchangeURL = "https://api.ratesexchange.eu/client/convertdetails?apiKey=cbbec2bf-ab4c-4754-9843-c317a4e11d11&from=usd&amount=1000&date=2018-06-25&currencies=PLN"
+    func exchangeValue(symbolFrom: String, symbolTo: String, value: String, completion: @escaping (RatesDetailModel) -> ()){
+        let exchangeURL = "https://api.ratesexchange.eu/client/convertdetails?apiKey=cbbec2bf-ab4c-4754-9843-c317a4e11d11&from=\(symbolFrom)&amount=\(value)&date=2018-06-25&currencies=\(symbolTo)"
         
         guard let url = URL(string: exchangeURL)else {
             return
